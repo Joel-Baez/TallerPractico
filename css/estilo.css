@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.formulario form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.formulario input, .formulario button {
+    padding: 10px;
+    border: 1px solid ;
+    border-radius: 6px;
+    font-size: 16px;
+}

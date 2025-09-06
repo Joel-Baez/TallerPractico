@@ -26,6 +26,5 @@ h1 {
 .formulario input, .formulario button {
     padding: 10px;
     border: 1px solid ;
-    border-radius: 6px;
-    font-size: 16px;
+    
 }

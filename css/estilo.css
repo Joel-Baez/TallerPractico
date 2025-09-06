@@ -39,3 +39,62 @@ h1 {
 .formulario button:hover {
   background: #45a049;
 }
+.buscador input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contador {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.lista-tareas ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-tareas li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.lista-tareas li.pendiente {
+  background: #ffebee;
+}
+
+.lista-tareas li.completada {
+  background: #e8f5e9;
+  text-decoration: line-through;
+}
+
+.lista-tareas button {
+  margin-left: 8px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.eliminar {
+  background: #f44336;
+  color: white;
+}
+
+.completar {
+  background: #2196F3;
+  color: white;
+}
+
+.lista-tareas button:hover {
+  opacity: 0.8;
+}

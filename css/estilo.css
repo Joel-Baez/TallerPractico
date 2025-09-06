@@ -18,14 +18,20 @@ h1 {
   text-align: center;
 }
 
-.formulario form {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+.formulario input, 
+.formulario button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
-.formulario input, .formulario button {
-    padding: 10px;
-    border: 1px solid ;
-    border-radius: 6px;
-    font-size: 16px;
+
+.formulario button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background: #45a049;
 }

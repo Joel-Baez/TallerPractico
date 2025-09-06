@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historial de Tareas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Historial de Tareas Diarias</h1>
+    <div class="formulario">
+      <form id="tareaForm">
+        <input type="date" id="fecha" required>
+        <input type="text" id="descripcion" placeholder="Descripción de la tarea" required>
+        <button type="submit">Agregar Tarea</button>
+      </form>
+    </div>
+    <div class="buscador">
+      <input type="text" id="buscar" placeholder="Buscar tarea...">
+    </div>
+
+    <div class="contador">
+      <p> Completadas: <span id="completadas">0</span></p>
+      <p> Pendientes: <span id="pendientes">0</span></p>
+    </div>
+    <div class="lista-tareas">
+      <ul id="tareas"></ul>
+    </div>
+  </div>
+  <script src="local.js"></script>
+</body>
+</html>

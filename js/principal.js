@@ -30,3 +30,25 @@ const mostrarRecord = () => {
   mejorTiempoSpan.textContent = localStorage.getItem('mejorTiempo') || '--';
   mejorIntentosSpan.textContent = localStorage.getItem('mejorIntentos') || '--';
 };
+const iniciarJuego = () => {
+  tablero.innerHTML = '';
+  intentos = 0;
+  aciertos = 0;
+  tiempo = 0;
+  intentosSpan.textContent = intentos;
+  tiempoSpan.textContent = tiempo;
+
+  clearInterval(timer);
+  timer = setInterval(() => {
+    tiempo++;
+    tiempoSpan.textContent = tiempo;
+  }, 1000);
+
+  const nivel = parseInt(nivelSelect.value);
+  tablero.style.gridTemplateColumns = `repeat(${nivel}, 1fr)`;
+  const totalCartas = nivel * nivel;
+  const simbolos = [];
+  for (let i = 0; i < totalCartas / 2; i++) {
+    simbolos.push(i, i);
+  }}
+

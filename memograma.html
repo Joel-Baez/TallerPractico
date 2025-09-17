@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego de Memoria</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Memorama</h1>
+
+    <div class="formulario">
+      <label for="nivel">Nivel de dificultad:</label>
+      <select id="nivel">
+        <option value="3">3x3</option>
+        <option value="6">6x6</option>
+        <option value="10">10x10</option>
+      </select>
+      <button id="iniciar">Iniciar / Reiniciar</button>
+    </div>
+
+    <div class="buscador">
+      <p>Intentos: <span id="intentos">0</span></p>
+      <p>Tiempo: <span id="tiempo">0</span> seg</p>
+    </div>
+
+    <div class="contador">
+      <p>Mejor tiempo: <span id="mejorTiempo">--</span></p>
+      <p>Menor intentos: <span id="mejorIntentos">--</span></p>
+    </div>
+
+    <div class="lista-tareas">
+      <div id="tablero" class="tablero"></div>
+    </div>
+  </div>
+
+  <script src="js/local.js"></script>
+</body>
+</html>

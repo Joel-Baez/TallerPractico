@@ -17,3 +17,30 @@ h1 {
   text-align: center;
 }
 
+.formulario, .buscador, .contador {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.formulario select, 
+.formulario button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.formulario button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background: #45a049;
+}
+
+
+

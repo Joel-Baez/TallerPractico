@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ahorcado</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <header>
+      <h1>Ahorcado</h1>
+      <div class="controles">
+        <button id="nuevo" class="primary">Nuevo</button>
+        <button id="mostrarLista" class="ghost">Editar lista</button>
+      </div>
+    </header>
+
+    <div class="game">
+      <div class="left">
+        <div class="panel">
+          <div class="stage" id="stage">
+            <svg viewBox="0 0 200 200" id="hangmanSvg">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#8aa" stroke-width="4" />
+              <line x1="40" y1="190" x2="40" y2="20"  stroke="#8aa" stroke-width="4" />
+              <line x1="40" y1="20"  x2="120" y2="20" stroke="#8aa" stroke-width="4" />
+              <line x1="120" y1="20" x2="120" y2="36" stroke="#8aa" stroke-width="4" />
+
+              <circle id="part-head" cx="120" cy="52" r="12" stroke="#e6eef6" stroke-width="3" fill="none" style="opacity:0"/>
+              <line id="part-body" x1="120" y1="64" x2="120" y2="110" stroke="#e6eef6" stroke-width="3" style="opacity:0"/>
+              <line id="part-arm1" x1="120" y1="80" x2="100" y2="95" stroke="#e6eef6" stroke-width="3" style="opacity:0"/>
+              <line id="part-arm2" x1="120" y1="80" x2="140" y2="95" stroke="#e6eef6" stroke-width="3" style="opacity:0"/>
+              <line id="part-leg1" x1="120" y1="110" x2="100" y2="145" stroke="#e6eef6" stroke-width="3" style="opacity:0"/>
+              <line id="part-leg2" x1="120" y1="110" x2="140" y2="145" stroke="#e6eef6" stroke-width="3" style="opacity:0"/>
+            </svg>
+          </div>
+
+          <div class="palabra" id="MostrarPalabra">-----------------</div>
+          <div class="info">
+            <div class="muted">Intentos restantes: <span id="lives">6</span></div>
+            <div class="muted">Letras usadas: <span id="used">—</span></div>
+          </div>
+          <div class="message" id="messageArea" style="display:none"></div>
+        </div>
+
+        <div class="panel">
+          <div class="muted">
+            Elige una letra (o usa teclado) — Pista: <span id="category">—</span>
+          </div>
+          <div class="teclado" id="teclado"></div>
+        </div>
+      </div>
+
+        <div class="panel">
+          <h3>Instrucciones</h3>
+          <p class="muted">Adivina la palabra antes de que el dibujo se complete.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/script.js"></script>
+</body>
+</html>

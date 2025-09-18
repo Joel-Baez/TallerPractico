@@ -50,5 +50,22 @@ const iniciarJuego = () => {
   const simbolos = [];
   for (let i = 0; i < totalCartas / 2; i++) {
     simbolos.push(i, i);
-  }}
+  }
+  cartas = simbolos
+    .sort(() => Math.random() - 0.5)
+    .map((simbolo, index) => {
+      const div = document.createElement('div');
+      div.className = 'carta';
+      div.dataset.simbolo = simbolo;
+      div.dataset.index = index;
+      div.textContent = '';
+      div.addEventListener('click', () => voltearCarta(div));
+      tablero.appendChild(div);
+      return div;
+    });
+};
 
+const voltearCarta = (carta) => {
+  if (carta.classList.contains('volteada') || carta.classList.contains('encontrada')) {
+    return;
+  }}

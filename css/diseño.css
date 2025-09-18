@@ -41,6 +41,37 @@ h1 {
 .formulario button:hover {
   background: #45a049;
 }
+.tablero {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+.carta {
+  width: 60px;
+  height: 60px;
+  background: #2196F3;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.carta.volteada {
+  background: #ffeb3b;
+  color: black;
+}
+
+.carta.encontrada {
+  background: #4CAF50;
+  color: white;
+  cursor: default;
+}
 
 
 

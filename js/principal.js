@@ -68,4 +68,26 @@ const iniciarJuego = () => {
 const voltearCarta = (carta) => {
   if (carta.classList.contains('volteada') || carta.classList.contains('encontrada')) {
     return;
-  }}
+  }
+if (primeraCarta && segundaCarta) return;
+
+  carta.classList.add('volteada');
+  carta.textContent = carta.dataset.simbolo;
+
+  if (!primeraCarta) {
+    primeraCarta = carta;
+  } else {
+    segundaCarta = carta;
+    intentos++;
+    intentosSpan.textContent = intentos;
+
+    if (primeraCarta.dataset.simbolo === segundaCarta.dataset.simbolo) {
+      primeraCarta.classList.add('encontrada');
+      segundaCarta.classList.add('encontrada');
+      primeraCarta = null;
+      segundaCarta = null;
+      aciertos++;
+          
+    }
+  }
+  };

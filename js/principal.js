@@ -18,10 +18,10 @@ const guardarRecord = () => {
     const mejorTiempo = localStorage.getItem('mejorTiempo');
     const mejorIntentos = localStorage.getItem('mejorIntentos');
 
-    if (!mejorTiempo || tiempo < mejorTiempo) {
+    if (!mejorTiempo || tiempo < parseInt(mejorTiempo)) {
         localStorage.setItem('mejorTiempo', tiempo);
     }
-    if (!mejorIntentos || intentos < mejorIntentos) {
+    if (!mejorIntentos || intentos < parseInt(mejorIntentos)) {
         localStorage.setItem('mejorIntentos', intentos);
     }
 };
@@ -46,7 +46,7 @@ const iniciarJuego = () => {
 
     const nivel = parseInt(nivelSelect.value);
     tablero.style.gridTemplateColumns = `repeat(${nivel}, 1fr)`;
-    const totalCartas = nivel * nivel;
+    const totalCartas = (nivel * nivel % 2 === 0) ? nivel * nivel : nivel * nivel - 1;
     const simbolos = [];
     for (let i = 0; i < totalCartas / 2; i++) {
         simbolos.push(i, i);

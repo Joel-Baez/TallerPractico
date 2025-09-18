@@ -43,7 +43,7 @@ const mostrarTareas = (filtro = '') => {
     li.appendChild(btnCompletar);
 
     const btnEliminar = document.createElement('button');
-    btnEliminar.textContent = "🗑"; 
+    btnEliminar.textContent = "🗑️"; 
     btnEliminar.className = "eliminar";
     btnEliminar.addEventListener('click', () => {
       tareas = tareas.filter(t => t !== tarea);

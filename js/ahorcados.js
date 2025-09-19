@@ -28,7 +28,8 @@ const PALABRAS_BASE = [
   { palabra: 'RELOJ',      pista: 'Objeto' },
   { palabra: 'AVENTURA',   pista: 'Actividad' },
   { palabra: 'DRAGON',     pista: 'Mitología' },
-  { palabra: 'CIENCIA',    pista: 'Conocimiento' }
+  { palabra: 'CIENCIA',    pista: 'Conocimiento' },
+  { palabra: 'FUTBOL',    pista: 'Deporte' },
 ];
 
 let listaPalabras = cargar() || PALABRAS_BASE.slice();

@@ -1,0 +1,36 @@
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#0f172a;
+  color:#e6eef6;
+  display:flex;
+  justify-content:center;
+  padding:20px;
+}
+.principal{max-width:900px;width:100%;}
+header{display:flex;justify-content:space-between;align-items:center;}
+.juego{display:grid;grid-template-columns:1fr 250px;gap:20px;margin-top:20px;}
+.lado-izquierdo{display:flex;flex-direction:column;gap:16px;}
+.tarjeta{background:#162447;padding:14px;border-radius:10px;}
+.ahorcado{height:300px;display:flex;justify-content:center;align-items:center;}
+.palabra{font-size:28px;letter-spacing:8px;text-align:center;margin:10px 0;}
+.info{display:flex;justify-content:space-between;}
+.teclado{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.letra{
+  background:#1f4068;border:none;color:white;
+  padding:8px 12px;border-radius:6px;cursor:pointer;
+}
+.letra.deshabilitada{opacity:0.4;cursor:default;}
+.mensaje{margin-top:10px;padding:10px;border-radius:8px;}
+.mensaje.ganar{background:rgba(16,185,129,0.2);}
+.mensaje.perder{background:rgba(239,68,68,0.2);}
+.btn-verde{
+  background:#10b981;color:#041d17;border:none;
+  padding:8px 12px;border-radius:8px;cursor:pointer;
+}
+.btn-gris{
+  background:transparent;border:1px solid #666;
+  color:#e6eef6;padding:8px 12px;border-radius:8px;cursor:pointer;
+}
+.botones-superior,.botones-editar{display:flex;gap:8px;margin-top:10px;}
+@media(max-width:800px){.juego{grid-template-columns:1fr;}}
